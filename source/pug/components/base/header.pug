@@ -3,8 +3,7 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Бизнес",
-        isActive: true,
+        text: "Туры",
       },
       {
         href: "#",
@@ -12,27 +11,31 @@ mixin header(headerMods, currentUrl)
       },
       {
         href: "#",
-        text: "Цены"
+        text: "Организаторам"
       },
       {
         href: "#",
-        text: "Оформить заказ"
+        text: "Отзывы"
       }
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods data-menu)
     .container
       .header__wrapper
         if(currentUrl === "index.html")
           span.header__logo
-            +icon("logo", 247, 35)
+            +icon("logo", 152, 102)
         else
           a.header__logo(href="index.html", aria-label="Переход на главную")
-            +icon("logo", 247, 35)
-        nav.main-nav(data-menu)
+            +icon("logo", 152, 102)
+        nav.main-nav
           button(type="button" aria-label="Переключатель отображения меню", aria-pressed="false" data-menu-toggle).btn-reset.main-nav__toggle
+            span.main-nav__line
+            span.main-nav__line
+            span.main-nav__line
           ul.main-nav__list
             each item in headerLinks
               li.main-nav__item
-                a.main-nav__link(class={"is-active": item.isActive} href=item.href)!=item.text
-
+                a.main-nav__link(href=item.href)!=item.text
+                  +icon("icon-arrow", 14, 14)
+        a.header__phone(href="tel:+7хххххххххх") +7 (ххх) ххх-хх-хх

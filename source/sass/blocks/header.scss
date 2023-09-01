@@ -1,6 +1,6 @@
 .header {
-  z-index: 11;
-  position: fixed;
+  z-index: 1;
+  position: absolute;
 
   top: 0;
   left: 0;
@@ -9,51 +9,121 @@
 
   overflow: hidden;
 
-  background-color: rgba($color-black-russian, 0.9);
+  background-color: $color-transparent;
+
+  &.is-active {
+    .header__logo svg {
+      color: $color-teal;
+    }
+
+    .main-nav__toggle {
+      width: 26px;
+      height: 26px;
+    }
+
+    .main-nav__line {
+      background-color: $color-nero;
+
+      &:nth-child(1) {
+        top: 13px;
+        transform: rotate(-45deg) translate(0, -50%);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:nth-child(3) {
+        top: 11px;
+        transform: rotate(45deg) translate(0, 50%);
+      }
+    }
+
+    .main-nav__list {
+      transform: translateX(0);
+    }
+  }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 33px 0 32px;
 
-    @include vp-1023 {
-      max-width: unset;
+    @include vp-767 {
+      align-items: center;
+     padding: 8px 0;
     }
   }
 
   &__logo {
+    z-index: 11;
     position: relative;
-    display: block;
 
-    width: 247px;
-    height: 35px;
-    margin-right: 40px;
-
-    @include vp-1023 {
-      margin-right: 20px;
-    }
+    width: 152px;
+    height: 102px;
+    margin-top: 20px;
 
     @include vp-767 {
-      z-index: 11;
-
-      width: 165px;
-      margin-right: 0;
+      width: 74px;
+      height: 51px;
+      margin-top: 0;
     }
 
     svg {
       display: block;
 
-      width: 247px;
-      height: 35px;
+      width: 152px;
+      height: 102px;
+
+      color: $color-default-white;
+
+      transition: color $trans-default;
 
       @include vp-767 {
-        width: 165px;
+        width: 74px;
+        height: 51px;
       }
+    }
+  }
+
+  &__phone {
+    display: block;
+    align-self: flex-start;
+
+    padding: 22px 50px;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25px;
+
+    border-radius: 0 0 10px 10px;
+    background-color: rgba($color-default-white, 0.24);
+    color: $color-default-white;
+    backdrop-filter: blur(4.5px);
+
+    transition: color $trans-default;
+
+    @include vp-1023 {
+      margin: 0 20px;
+    }
+
+    @include vp-767 {
+      align-self: center;
+      padding: 0;
+
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+
+      border: none;
+      background-color: $color-transparent;
+    }
+
+    @include hover-focus {
+      color: $color-las-palmas;
     }
   }
 }

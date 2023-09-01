@@ -10,6 +10,14 @@ $color-transparent:             rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
+$color-nero:                    #1f1f1f;
+$color-teal:                    #037280;
+$color-java:                    #208d9a;
+$color-sherpa-blue:             #004f4b;
+$color-mosque:                  #066b66;
+$color-las-palmas:              #c7de2e;
+$color-pear:                    #d5f021;
+
 $color-black-russian:           #10101d;
 $color-black-russian-2:         #2a2b30;
 $color-jaguar:                  #272733;
@@ -27,9 +35,9 @@ $black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0)
 // ---------------------------------
 
 // переменная используемая в html для подключения скейлинга
-$fz-default: 20px;
+$fz-default: 16px;
 
-$ff-lato: "Lato", "Arial", sans-serif;
+$ff-urbanist: "Urbanist", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -58,6 +66,7 @@ $vp-320:                            320px;
 $vp-375:                            375px;
 $vp-768:                            768px;
 $vp-1024:                           1024px;
+$vp-1200:                           1200px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;

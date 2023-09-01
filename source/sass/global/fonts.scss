@@ -1,43 +1,54 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "Lato";
+  font-family: "Urbanist";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-Regular.woff2") format("woff2"),
-    url("../fonts/Lato-Regular.woff") format("woff");
+    url("../fonts/Urbanist-Regular.woff2") format("woff2"),
+    url("../fonts/Urbanist-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Urbanist";
+
+  font-display: swap;
+  src:
+    url("../fonts/Urbanist-Medium.woff2") format("woff2"),
+    url("../fonts/Urbanist-Medium.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 600;
-  font-family: "Lato";
+  font-family: "Urbanist";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-SemiBold.woff2") format("woff2"),
-    url("../fonts/Lato-SemiBold.woff") format("woff");
+    url("../fonts/Urbanist-SemiBold.woff2") format("woff2"),
+    url("../fonts/Urbanist-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 700;
-  font-family: "Lato";
+  font-family: "Urbanist";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-Bold.woff2") format("woff2"),
-    url("../fonts/Lato-Bold.woff") format("woff");
+    url("../fonts/Urbanist-Bold.woff2") format("woff2"),
+    url("../fonts/Urbanist-Bold.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
-  font-weight: 800;
-  font-family: "Lato";
+  font-weight: 900;
+  font-family: "Urbanist";
 
   font-display: swap;
   src:
-    url("../fonts/Lato-ExtraBold.woff2") format("woff2"),
-    url("../fonts/Lato-ExtraBold.woff") format("woff");
+    url("../fonts/Urbanist-Black.woff2") format("woff2"),
+    url("../fonts/Urbanist-Black.woff") format("woff");
 }

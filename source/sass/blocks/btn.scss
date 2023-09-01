@@ -3,17 +3,16 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  padding: 14px 9px;
+  padding: 17px 20px;
 
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
 
-  border: 1px solid $color-default-white;
-  border-radius: 4px;
-  background-color: $color-summer-sky-2;
-  color: $color-default-white;
+  border: none;
+  border-radius: 5px;
+  background-color: $color-las-palmas;
+  color: $color-nero;
 
   cursor: pointer;
   user-select: none;
@@ -22,13 +21,14 @@
 
   outline: none;
 
-  &--white {
-    border: 1px solid $color-dolphin;
-    background-color: $color-default-white;
-    color: $color-black-russian-2;
+  @include vp-767 {
+    padding: 13px 20px;
+
+    font-size: 15px;
+    line-height: 19px;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    opacity: $color-pear;
   }
 }
