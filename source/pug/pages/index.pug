@@ -1,16 +1,26 @@
 extends ../components/base/layout
 
 block variables
-    - const title = "global"
-    - const wrapperMods = ""
-    - const hasHeader = true
-    - const headerMods = ""
-    - const hasFooter = true
-    - const footerMods = ""
-    - const currentUrl = "index.html"
+  - const title = "Travel Retrit"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "index.html"
 
 block main
-    main
-      +intro()
+  main
+    +intro({
+      background: {
+        src: "intro-background-main",
+        format: "png",
+        width: "1920",
+        height: "759",
+        alt: "background"
+      },
+      title: "Все авторские туры и&nbsp;ретриты на&nbsp;одном сайте",
+      description: "Откройте для себя невероятные возможности для духовного роста и&nbsp;отдыха в&nbsp;сопровождении опытных&nbsp;мастеров и&nbsp;единомышленников в&nbsp;любой точке планеты"
+    })
 
 block modals

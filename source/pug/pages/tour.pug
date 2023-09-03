@@ -1,0 +1,34 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Travel Retrit"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "tour.html"
+
+block main
+  main
+    +intro({
+      background: {
+        src: "intro-background-tour",
+        format: "png",
+        width: "1920",
+        height: "759",
+        alt: "background"
+      },
+      title: "Путешествие на&nbsp;Шри&zwj;-&zwj;Ланку",
+      description: "Откройте для себя невероятные возможности для духовного роста и&nbsp;отдыха в&nbsp;сопровождении опытных мастеров и&nbsp;единомышленников в&nbsp;любой точке планеты",
+      price: "От 150 000 ₽",
+      image: {
+        src: "intro-image",
+        format: "png",
+        width: "445",
+        height: "445",
+        alt: "girl on white background"
+      }
+    })
+
+block modals

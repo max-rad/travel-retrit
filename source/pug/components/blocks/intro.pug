@@ -1,10 +1,24 @@
-mixin intro()
+mixin intro(data)
   section.intro
     .intro__background
-      +picture("content/intro", "intro-background", "png", 1920, 759, "background")
+      +picture("content/intro", data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
     .container
       .intro__wrapper
-        h1.intro__title Все авторские туры и&nbsp;ретриты на&nbsp;одном сайте
-        p.intro__description Откройте для себя невероятные возможности для духовного роста и&nbsp;отдыха в&nbsp;сопровождении опытных мастеров и&nbsp;единомышленников в&nbsp;любой точке планеты
-        +btn({type: "button", text: "Выбрать тур"}).intro__button
+        .intro__content
+          h1.intro__title(class={"intro__title--medium" : currentUrl !== "index.html"})!=data.title
+          p.intro__description(class={"intro__description--medium" : currentUrl !== "index.html"})!=data.description
+          if (data.price)
+            p.intro__price!=data.price
+          +btn({type: "button", text: "Выбрать тур"}).intro__button
+        .intro__additional-content
+          if (data.image)
+            .intro__image-wrapper
+              +picture("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+          ul.intro__list
+            li.intro__item
+              a.intro__link(href="#")
+                +icon("icon-telegram", 51, 51)
+            li.intro__item
+              a.intro__link(href="#")
+                +icon("icon-whatsapp", 51, 51)
 

@@ -17,7 +17,7 @@
   cursor: pointer;
   user-select: none;
 
-  transition: opacity $trans-default;
+  transition: background-color $trans-default;
 
   outline: none;
 
@@ -29,6 +29,6 @@
   }
 
   @include hover-focus {
-    opacity: $color-pear;
+    background-color: $color-pear;
   }
 }
