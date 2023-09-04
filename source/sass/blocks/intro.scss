@@ -1,6 +1,7 @@
 .intro {
   position: relative;
   min-height: 759px;
+  overflow: hidden;
 
   border-radius: 0 0 20px 20px;
 
@@ -20,6 +21,8 @@
 
     width: 100%;
     height: 100%;
+
+    border-radius: 0 0 20px 20px;
 
     &::before {
       content: "";

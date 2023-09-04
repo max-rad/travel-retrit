@@ -1,0 +1,14 @@
+mixin countries(data)
+  section.countries
+    .container
+      .countries__wrapper
+        h2.countries__title Страны
+        ul.countries__list
+          each item in data
+            li.countries__item(class=(item.mod ? `countries__item--${item.mod}` : ""))
+              a.countries__link(href=item.href)
+              h3.countries__label!=item.text
+                +icon("icon-arrow", 18, 18)
+              .countries__image-wrapper
+                +picture("content/countries", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+

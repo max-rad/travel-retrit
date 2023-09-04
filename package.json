@@ -66,6 +66,7 @@
     "imagemin-svgo": "^10.0.1",
     "postcss": "^8.4.29",
     "sass": "^1.62.1",
+    "swiper": "^10.2.0",
     "webpack": "^5.85.0",
     "webpack-stream": "^7.0.0"
   }

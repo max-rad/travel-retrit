@@ -1,0 +1,9 @@
+mixin promo-card(data)
+  .promo-card(class=(data.mod ? `promo-card--${data.mod}` : ""))
+    a.promo-card__link(href=data.href)
+    h3.promo-card__label
+      span.promo-card__text(class=(data.textMod ? `promo-card__text--${data.textMod}` : ""))!=data.text
+      if (data.icon)
+        +icon(data.icon.src, data.icon.width, data.icon.height)
+    .promo-card__image-wrapper
+      +picture("content/tour-types", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

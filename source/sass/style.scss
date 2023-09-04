@@ -2,6 +2,9 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper/swiper";
+@import "vendor/swiper/navigation";
+@import "vendor/swiper/pagination";
 
 // Global
 // ---------------------------------
@@ -21,3 +24,8 @@
 @import "blocks/footer";
 @import "blocks/btn";
 @import "blocks/intro";
+@import "blocks/countries";
+@import "blocks/tour-types";
+@import "blocks/promo-card";
+@import "blocks/guide";
+@import "blocks/slider-controls";

@@ -1,0 +1,7 @@
+mixin slider-controls()
+  .slider-controls(data-slider-controls)&attributes(attributes)
+    button(type="button" data-slider-control="prev").btn-reset.slider-controls__control.slider-controls__control--prev
+      +icon('icon-arrow-left', 47, 21)
+    .slider-controls__fraction(data-slider-fraction)
+    button(type="button" data-slider-control="next").btn-reset.slider-controls__control.slider-controls__control--next
+      +icon('icon-arrow-right', 47, 21)

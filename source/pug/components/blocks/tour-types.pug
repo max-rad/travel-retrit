@@ -1,0 +1,88 @@
+mixin tour-types()
+  -
+    const list = [
+      {
+        text: "Йога-туры",
+        href: "#",
+        image: {
+          src: "tour-type-1",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "tour-type"
+        }
+      },
+      {
+        text: "Фитнес-туры",
+        href: "#",
+        image: {
+          src: "tour-type-2",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "tour-type"
+        }
+      },
+      {
+        text: "Арт-туры",
+        href: "#",
+        image: {
+          src: "tour-type-3",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "tour-type"
+        }
+      },
+      {
+        text: "Ретриты выходного дня",
+        textMod: "mobile",
+        href: "#",
+        image: {
+          src: "tour-type-4",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "tour-type"
+        }
+      },
+      {
+        text: "Обучающие курсы",
+        href: "#",
+        image: {
+          src: "tour-type-5",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "tour-type"
+        }
+      },
+      {
+        text: "Посмотреть все",
+        href: "#",
+        image: {
+          src: "tour-type-6",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "tour-type"
+        },
+        icon: {
+          src: "icon-arrow",
+          width: 14,
+          height: 14
+        },
+        mod: "other",
+      }
+    ]
+
+  section.tour-types
+    .container
+      .tour-types__wrapper
+        h2.tour-types__title Виды туров
+        ul.tour-types__list
+          each item in list
+            li.tour-types__item
+              +promo-card(item)
+
+
