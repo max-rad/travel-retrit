@@ -76,6 +76,14 @@
     }
 
     &--other {
+      .countries__link {
+        @include hover-focus {
+          ~ .countries__image-wrapper::before {
+            background: rgba($color-mosque-2, 0.64);
+          }
+        }
+      }
+
       .countries__label {
         font-size: 25px;
         line-height: 33px;
@@ -98,7 +106,7 @@
   }
 
   &__link {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     display: block;
 
@@ -165,6 +173,8 @@
       height: 18px;
       margin-left: 15px;
 
+      color: $color-las-palmas;
+
       @include vp-1023 {
         width: 14px;
         height: 14px;
@@ -211,7 +221,7 @@
       border-radius: 10px;
       background: linear-gradient(1deg, rgba($color-black-pearl, 0.88) 0.73%, rgba($color-persian-green, 0.13) 99.35%);
 
-      transition: opacity $trans-default;
+      transition: background $trans-default;
     }
 
     img {

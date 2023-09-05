@@ -37,19 +37,26 @@
 
   &__slider {
     width: 100%;
-    padding-bottom: 60px;
   }
 
   &__list {
-    margin: 0;
+    margin: 0 0 60px;
     padding: 0;
 
     list-style: none;
+
+    @include vp-1023 {
+      margin: 0 0 50px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 40px;
+    }
   }
 
   &__item {
     position: relative;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
 
     background-color: $color-default-white;
     filter: drop-shadow(0 4px 22px rgba($color-christalle, 0.09));
@@ -74,13 +81,13 @@
   }
 
   &__image-wrapper {
-    width: 350px;
+    width: 100%;
     height: 303px;
 
     border-radius: 10px;
 
     img {
-      width: 350px;
+      width: 100%;
       height: 303px;
 
       border-radius: 10px 10px 0 0;
@@ -90,6 +97,7 @@
   }
 
   &__name {
+    width: 100%;
     margin: 0;
     padding: 20px;
 

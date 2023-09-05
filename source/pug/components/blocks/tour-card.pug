@@ -1,0 +1,15 @@
+mixin tour-card(data)
+  .tour-card
+    //a.tour-card__link(href=data.href)
+    .tour-card__image-wrapper
+      +picture("content/popular-tours", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    .tour-card__info-wrapper
+      h3.tour-card__title!=data.title
+      p.tour-card__description!=data.description
+        =" "
+        span!=data.additionalDescription
+      .tour-card__block
+        +guide-info(data.guideInfo)
+        p.tour-card__price!=data.price
+      +btn({type: "button", text: "Подробнее о туре", icon: {name: "icon-arrow", width: 9, height: 9}})
+

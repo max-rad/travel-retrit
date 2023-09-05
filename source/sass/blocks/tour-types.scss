@@ -61,9 +61,6 @@
 
   &__item {
     position: relative;
-    overflow: hidden;
-
-    border-radius: 10px;
 
     @include vp-1023 {
       margin-bottom: 20px;

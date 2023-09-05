@@ -1,0 +1,86 @@
+mixin want-to-see()
+  -
+    const list = [
+      {
+        text: "Море",
+        href: "#",
+        image: {
+          path: "content/want-to-see",
+          src: "sea",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "sea"
+        }
+      },
+      {
+        text: "Горы",
+        href: "#",
+        image: {
+          path: "content/want-to-see",
+          src: "mountain",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "mountain"
+        }
+      },
+      {
+        text: "Города",
+        href: "#",
+        image: {
+          path: "content/want-to-see",
+          src: "city",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "city"
+        }
+      },
+      {
+        text: "Озера",
+        href: "#",
+        image: {
+          path: "content/want-to-see",
+          src: "lake",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "lake"
+        }
+      },
+      {
+        text: "Достопримечательности",
+        href: "#",
+        image: {
+          path: "content/want-to-see",
+          src: "sight",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "sight"
+        }
+      },
+      {
+        text: "Океан",
+        href: "#",
+        image: {
+          path: "content/want-to-see",
+          src: "ocean",
+          format: "png",
+          width: "480",
+          height: "316",
+          alt: "ocean"
+        }
+      }
+    ]
+
+  section.want-to-see
+    .container
+      .want-to-see__wrapper
+        h2.want-to-see__title Хочу увидеть
+        ul.want-to-see__list
+          each item in list
+            li.want-to-see__item
+              +promo-card(item)
+

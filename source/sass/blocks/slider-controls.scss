@@ -36,9 +36,14 @@
       height: 21px;
       flex-shrink: 0;
 
-       color: $color-las-palmas;
+      color: $color-las-palmas;
 
       transition: transform $trans-default;
+
+      @include vp-767 {
+        width: 35px;
+        height: 14px;
+      }
     }
 
     @include hover-focus {
@@ -49,6 +54,9 @@
   }
 
   &__fraction {
+    display: flex;
+    justify-content: center;
+    min-width: 40px;
     margin: 0 23px;
 
     font-weight: 400;
@@ -58,6 +66,13 @@
     color: $color-nero-2;
 
     user-select: none;
+
+    @include vp-767 {
+      margin: 0 20px;
+
+      font-size: 15px;
+      line-height: 23px;
+    }
   }
 
   .swiper-button-disabled {

@@ -1,12 +1,25 @@
 .promo-card {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 10px;
+
   &--other {
+    .promo-card__link {
+      @include hover-focus {
+        ~ .promo-card__image-wrapper::before {
+          background: rgba($color-pine-green, 0.64);
+        }
+      }
+    }
+
     .promo-card__image-wrapper::before {
       background: rgba($color-surfie-green, 0.64);
     }
   }
 
   &__link {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     display: block;
 
@@ -17,7 +30,7 @@
     height: 100%;
 
     @include hover-focus {
-      ~ .tour-types__image-wrapper::before {
+      ~ .promo-card__image-wrapper::before {
         background: linear-gradient(359deg, rgba($color-cyprus, 0.75) 0.79%, rgba($color-ming, 0.63) 26.73%, rgba($color-default-white, 0.18) 99.38%);
       }
     }
@@ -85,6 +98,8 @@
       height: 14px;
 
       margin-left: 15px;
+
+      color: $color-las-palmas;
 
       @include vp-767 {
         width: 12px;

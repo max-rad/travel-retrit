@@ -1,3 +1,45 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "Туры",
+      },
+      {
+        href: "#",
+        text: "О нас"
+      },
+      {
+        href: "#",
+        text: "Организаторам"
+      },
+      {
+        href: "#",
+        text: "Политика обработки персональных данных",
+        mod: "tablet"
+      },
+    ]
+
   footer.footer(class=footerMods)
     .container
+      .footer__wrapper
+        if(currentUrl === "index.html")
+          span.footer__logo
+            +icon("logo", 152, 102)
+        else
+          a.footer__logo(href="index.html", aria-label="Переход на главную")
+            +icon("logo", 152, 102)
+        a.footer__privacy-policy(href="#") Политика обработки персональных данных
+        ul.footer__list
+          each item in footerLinks
+            li.footer__item(class=(item.mod ? `footer__item--${item.mod}` : ""))
+              a.footer__link(href=item.href)!=item.text
+        .footer__contacts
+          a.footer__phone(href="tel:+7xxxxxxx") +7 (ххх) ххх-хх-хх
+          ul.footer__socials
+            li.footer__social
+              a.footer__social-link(href="#")
+                +icon("icon-telegram-footer", 51, 51)
+            li.footer__social
+              a.footer__social-link(href="#")
+                +icon("icon-whatsapp-footer", 51, 51)

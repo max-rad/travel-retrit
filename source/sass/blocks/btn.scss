@@ -31,4 +31,14 @@
   @include hover-focus {
     background-color: $color-pear;
   }
+
+  &__icon {
+    width: 9px;
+    height: 9px;
+    margin-left: 10px;
+
+    flex-shrink: 0;
+
+    color: $color-nero;
+  }
 }

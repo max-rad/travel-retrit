@@ -1,0 +1,28 @@
+mixin feedback()
+  section.feedback
+    .feedback__background
+      +picture("content/feedback", "feedback-background", "png", "1920", "575", "background")
+    .container
+      .feedback__wrapper
+        h2.feedback__title Задать вопрос
+        p.feedback__description После заполнения формы с&nbsp;вами свяжется наш специалист и&nbsp;проконсультирует по&nbsp;любым вопросам
+        .feedback__form
+          form(method="get")
+            .feedback__form-wrapper
+              +custom-input({
+                inputLabel: "*Ваше имя",
+                inputType: "text",
+                inputName: "name"
+              }).feedback__input
+              +custom-input({
+                inputLabel: "*Ваш телефон",
+                inputType: "tel",
+                inputName: "phone"
+              }).feedback__input
+              +custom-textarea({
+                textareaLabel: "Ваш вопрос",
+                textareaName: "question"
+              }).feedback__textarea
+            +btn({type: "submit", text: "Отправить"}).feedback__button
+            p.feedback__text Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
+              a(href="#") политикой обработки персональных данных

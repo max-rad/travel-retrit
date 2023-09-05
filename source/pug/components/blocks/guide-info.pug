@@ -1,0 +1,8 @@
+mixin guide-info(data)
+  .guide-info
+    .guide-info__image-wrapper
+      +picture("content", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+    .guide-info__info-wrapper
+      if (data.position)
+        .guide-info__position!=data.position
+      .guide-info__name!=data.name

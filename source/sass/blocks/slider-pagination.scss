@@ -1,0 +1,27 @@
+@at-root {
+  :root {
+    --swiper-pagination-color: #c7de2e;
+    --swiper-pagination-left: auto;
+    --swiper-pagination-right: 8px;
+    --swiper-pagination-bottom: 8px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-fraction-color: inherit;
+    --swiper-pagination-progressbar-bg-color: rgba(0,0,0,0.25);
+    --swiper-pagination-progressbar-size: 4px;
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 47px;
+    --swiper-pagination-bullet-height: 4px;
+    --swiper-pagination-bullet-border-radius: 2px;
+    --swiper-pagination-bullet-inactive-color: #c6c6c6;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 10px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+  }
+}
+
+.slider-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}

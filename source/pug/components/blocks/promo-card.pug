@@ -6,4 +6,4 @@ mixin promo-card(data)
       if (data.icon)
         +icon(data.icon.src, data.icon.width, data.icon.height)
     .promo-card__image-wrapper
-      +picture("content/tour-types", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+      +picture(data.image.path, data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
