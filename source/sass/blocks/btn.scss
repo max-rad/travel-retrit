@@ -28,6 +28,15 @@
     line-height: 19px;
   }
 
+  &--transparent {
+    padding: 13px 20px;
+
+    font-weight: 400;
+
+    border: 1px solid $color-las-palmas;
+    background-color: $color-transparent;
+  }
+
   @include hover-focus {
     background-color: $color-pear;
   }

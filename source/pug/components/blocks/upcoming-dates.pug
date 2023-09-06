@@ -1,0 +1,26 @@
+mixin upcoming-dates()
+  -
+    const list = [
+      {
+        text: "20&nbsp;августа&nbsp;&mdash; 27&nbsp;августа"
+      },
+      {
+        text: "25&nbsp;августа&nbsp;&mdash; 31&nbsp;августа"
+      },
+      {
+        text: "31&nbsp;августа&nbsp;&mdash; 5&nbsp;сентября"
+      },
+      {
+        text: "3&nbsp;сентября&nbsp;&mdash; 10&nbsp;сентября"
+      }
+    ]
+
+  section.upcoming-dates
+    .container
+      .upcoming-dates__wrapper
+        h2.upcoming-dates__title Ближайшие даты
+          +icon("icon-calendar", 21, 24)
+        ul.upcoming-dates__list
+          each item in list
+            li.upcoming-dates__item
+              p.upcoming-dates__text!=item.text

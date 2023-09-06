@@ -1,0 +1,195 @@
+mixin guide()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "guide-1",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-2",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-3",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-4",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-1",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-2",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-3",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-4",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-1",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-2",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-3",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-4",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-1",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-2",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-3",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александра Иванова"
+      },
+      {
+        href: "#",
+        image: {
+          src: "guide-4",
+          format: "png",
+          width: "350",
+          height: "303",
+          alt: "guide"
+        },
+        name: "Александр Владимиров"
+      }
+    ]
+
+  section.guides
+    .container
+      .guides__wrapper
+        h2.guides__title Travel-гиды
+        +slider-controls()(data-slider-controls="guides")
+        .guides__slider.swiper(data-slider="guides")
+          ul.guides__list.swiper-wrapper
+            each item in list
+              li.guides__item.swiper-slide
+                a(href=item.href).guides__link
+                .guides__image-wrapper
+                  +picture("content/guides", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+                h3.guides__name!=item.name
+          .slider-pagination.swiper-pagination

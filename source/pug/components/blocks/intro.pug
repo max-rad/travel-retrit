@@ -6,10 +6,15 @@ mixin intro(data)
       .intro__wrapper
         .intro__content
           h1.intro__title(class={"intro__title--medium" : currentUrl !== "index.html"})!=data.title
-          p.intro__description(class={"intro__description--medium" : currentUrl !== "index.html"})!=data.description
+          if (data.description)
+            p.intro__description(class={"intro__description--medium" : currentUrl !== "index.html"})!=data.description
           if (data.price)
             p.intro__price!=data.price
-          +btn({type: "button", text: "Выбрать тур"}).intro__button
+          if (data.button)
+            +btn({type: "button", text: "Выбрать тур"}).intro__button
+          if (data.form)
+            .intro__form
+              form(method="get")
         .intro__additional-content
           if (data.image)
             .intro__image-wrapper

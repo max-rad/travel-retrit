@@ -1,0 +1,51 @@
+.upcoming-dates {
+  position: relative;
+
+  top: -21px;
+
+  margin-bottom: -21px;
+
+  background-color: $color-teal;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 91px 0 70px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+
+    color: $color-default-white;
+
+    svg {
+      width: 21px;
+      height: 24px;
+      margin-left: 20px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

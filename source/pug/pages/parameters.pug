@@ -1,0 +1,27 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Travel Retrit"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "parameters.html"
+
+block main
+  main
+    +intro({
+      background: {
+        src: "intro-background-parameters",
+        format: "png",
+        width: "1920",
+        height: "759",
+        alt: "background"
+      },
+      title: "Подобрать по&nbsp;параметрам",
+      form: true
+    })
+    +tour-select()
+    +feedback({title: "Записаться на&nbsp;тур", description: "После заполнения формы с&nbsp;вами свяжется наш специалист и&nbsp;проконсультирует по&nbsp;любым вопросам"})
+block modals

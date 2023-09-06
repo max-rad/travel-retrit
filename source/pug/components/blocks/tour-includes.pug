@@ -1,0 +1,124 @@
+mixin tour-includes()
+  -
+    const list1 = [
+      {
+        icon: {
+          src: "icon-check",
+          width: "42",
+          height: "42"
+        },
+        text: "Встреча в&nbsp;аэропорту по&nbsp;прибытии"
+      },
+      {
+        icon: {
+          src: "icon-check",
+          width: "42",
+          height: "42"
+        },
+        text: "Трансферы из/в аэропорт (первый и&nbsp;последний день)"
+      },
+      {
+        icon: {
+          src: "icon-check",
+          width: "42",
+          height: "42"
+        },
+        text: "Экскурсии и&nbsp;активности"
+      },
+      {
+        icon: {
+          src: "icon-check",
+          width: "42",
+          height: "42"
+        },
+        text: "Все передвижения на&nbsp;кондиционируемом автобусе с&nbsp;водителем (около 1200&nbsp;км) и&nbsp;бесплатным Wi-Fi"
+      },
+      {
+        icon: {
+          src: "icon-check",
+          width: "42",
+          height: "42"
+        },
+        text: "Плата за&nbsp;общественный транспорт (билеты на&nbsp;поезд, тук-туки)"
+      },
+      {
+        icon: {
+          src: "icon-check",
+          width: "42",
+          height: "42"
+        },
+        text: "Аренда приватного катамарана для китового сафари"
+      },
+      {
+        icon: {
+          src: "icon-check",
+          width: "42",
+          height: "42"
+        },
+        text: "Все входные билеты по&nbsp;программе путешествия"
+      }
+    ]
+
+  -
+    const list2 = [
+      {
+        icon: {
+          src: "icon-uncheck",
+          width: "42",
+          height: "42"
+        },
+        text: "Обеды (из&nbsp;расчёта европейская кухня приблизительно 7&nbsp;$&mdash;8&nbsp;в день на&nbsp;человека и&nbsp;местная 2&nbsp;$&mdash;3&nbsp;на человека, свежевыжатые соки-смузи 1&nbsp;$&mdash;2) и&nbsp;алкогольные напитки"
+      },
+      {
+        icon: {
+          src: "icon-uncheck",
+          width: "42",
+          height: "42"
+        },
+        text: "Медицинская туристическая страховка (оформляется обязательно с&nbsp;активными/экстремальными видами спорта)"
+      },
+      {
+        icon: {
+          src: "icon-uncheck",
+          width: "42",
+          height: "42"
+        },
+        text: "Международный авиаперелет до&nbsp;Коломбо и&nbsp;обратно. Цена билета от&nbsp;$600&nbsp;в зависимости от&nbsp;места вылета и&nbsp;даты покупки"
+      },
+      {
+        icon: {
+          src: "icon-uncheck",
+          width: "42",
+          height: "42"
+        },
+        text: "Виза (оформляется онлайн&nbsp;&mdash; 50&nbsp;$ на&nbsp;человека или по&nbsp;прилёту в&nbsp;аэропорту Коломбо&nbsp;&mdash; 60&nbsp;$ на&nbsp;человека)"
+      },
+      {
+        icon: {
+          src: "icon-uncheck",
+          width: "42",
+          height: "42"
+        },
+        text: "Сувениры, чаевые и&nbsp;прочие расходы личного характера"
+      }
+    ]
+
+  section.tour-includes
+    .container
+      .tour-includes__wrapper
+        h2.tour-includes__title Что входит в стоимость
+        .tour-includes__content
+          .tour-includes__block
+            h3.tour-includes__label В тур включено
+            ul.tour-includes__list
+              each item in list1
+                li.tour-includes__item
+                  +icon(item.icon.src, item.icon.width, item.icon.height)
+                  p.tour-includes__text!=item.text
+          .tour-includes__block
+            h3.tour-includes__label В тур не включено
+            ul.tour-includes__list
+              each item in list2
+                li.tour-includes__item
+                  +icon(item.icon.src, item.icon.width, item.icon.height)
+                  p.tour-includes__text!=item.text

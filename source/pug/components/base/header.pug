@@ -33,9 +33,10 @@ mixin header(headerMods, currentUrl)
             span.main-nav__line
             span.main-nav__line
             span.main-nav__line
-          ul.main-nav__list
-            each item in headerLinks
-              li.main-nav__item
-                a.main-nav__link(href=item.href)!=item.text
-                  +icon("icon-arrow", 14, 14)
+          .main-nav__wrapper
+            ul.main-nav__list
+              each item in headerLinks
+                li.main-nav__item
+                  a.main-nav__link(href=item.href)!=item.text
+                    +icon("icon-arrow", 14, 14)
         a.header__phone(href="tel:+7хххххххххх") +7 (ххх) ххх-хх-хх

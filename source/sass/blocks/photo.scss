@@ -1,0 +1,180 @@
+.photo {
+  &__wrapper {
+    padding: 70px 0;
+
+    @include vp-1023 {
+      padding: 50px 0;
+    }
+
+    @include vp-767 {
+      padding: 40px 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 60px;
+
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 52px;
+
+    color: $color-nero;
+
+    @include vp-1023 {
+      margin: 0 0 50px;
+
+      font-size: 30px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 40px;
+
+      font-size: 25px;
+      line-height: 33px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include vp-1439 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include vp-1023 {
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    &--more {
+      .photo__link {
+        @include hover-focus {
+          ~ .photo__image-wrapper::before {
+            background: rgba($color-mosque-4, 0.64);
+          }
+        }
+      }
+
+      .photo__image-wrapper::before {
+        content: "";
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        border-radius: 10px;
+        background: rgba($color-mosque-3, 0.64);
+
+        transition: bacground $trans-default;
+      }
+    }
+  }
+
+  &__link {
+    z-index: 1;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    border-radius: 10px;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 286px;
+    border-radius: 10px;
+
+    @include vp-1023 {
+      max-height: 174px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 286px;
+      border-radius: 10px;
+
+      object-fit: cover;
+
+      @include vp-1023 {
+        max-height: 174px;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    bottom: 40px;
+    left: 40px;
+
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 33px;
+    text-transform: uppercase;
+
+    color: $color-default-white;
+
+    @include vp-1023 {
+      bottom: 20px;
+      left: 20px;
+
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    @include vp-767 {
+      top: 50%;
+      bottom: 0;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-left: 15px;
+      flex-shrink: 0;
+
+      color: $color-las-palmas;
+
+      @include vp-1023 {
+        width: 13px;
+        height: 13px;
+      }
+
+      @include vp-767 {
+        display: none;
+      }
+    }
+  }
+}

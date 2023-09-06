@@ -22,6 +22,7 @@ block main
       title: "Путешествие на&nbsp;Шри&zwj;-&zwj;Ланку",
       description: "Откройте для себя невероятные возможности для духовного роста и&nbsp;отдыха в&nbsp;сопровождении опытных мастеров и&nbsp;единомышленников в&nbsp;любой точке планеты",
       price: "От 150 000 ₽",
+      button: true,
       image: {
         src: "intro-image",
         format: "png",
@@ -30,5 +31,13 @@ block main
         alt: "girl on white background"
       }
     })
-
+    +upcoming-dates()
+    +tour-description()
+    +promo-video()
+    +photo()
+    +feedback({title: "Записаться на&nbsp;тур", description: "После заполнения формы с&nbsp;вами свяжется наш специалист и&nbsp;проконсультирует по&nbsp;любым вопросам"})
+    +guide()
+    +tour-reviews()
+    +tour-includes()
+    +feedback({title: "Записаться на&nbsp;тур", description: "После заполнения формы с&nbsp;вами свяжется наш специалист и&nbsp;проконсультирует по&nbsp;любым вопросам"})
 block modals

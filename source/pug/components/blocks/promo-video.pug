@@ -1,0 +1,9 @@
+mixin promo-video()
+  section.promo-video
+    .container
+      .promo-video__wrapper
+        h2.promo-video__title Промо-видео
+        .promo-video__video-wrapper
+          +picture("content/promo-video", "video-background", "png", "1080", "498", "video background")
+          button(type="button" aria-label="Воспроизвести видео").btn-reset.promo-video__button
+            +icon("icon-play", 87, 87)

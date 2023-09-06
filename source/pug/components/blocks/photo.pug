@@ -1,0 +1,100 @@
+mixin photo()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "photo-1",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "photo-2",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "photo-3",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "photo-4",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "photo-5",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "photo-6",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "photo-7",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo"
+        }
+      },
+      {
+        href: "#",
+        image: {
+          src: "photo-8",
+          format: "png",
+          width: "350",
+          height: "286",
+          alt: "photo",
+        },
+        mod: "more",
+        button: true
+      }
+    ]
+
+  section.photo
+    .container
+      .photo__wrapper
+        h2.photo__title Фотографии
+        ul.photo__list
+          each item in list
+            li.photo__item(class=(item.mod ? `photo__item--${item.mod}` : ""))
+              a.photo__link(href=item.href)
+              .photo__image-wrapper
+                +picture("content/photo", item.image.src, item.image.format, item.image.width, item.image.height, item.image.alt)
+              if (item.button)
+                button(type="button").btn-reset.photo__button Смотреть еще
+                  +icon("icon-arrow", 14, 14)

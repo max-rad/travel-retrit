@@ -1,0 +1,205 @@
+mixin tour-select()
+  -
+    const list = [
+      {
+        href: "#",
+        image: {
+          src: "tour-1",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Мурманск, Териберка, Россия",
+        description: "14 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-1",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Александра",
+        },
+        price: "От  150 000 ₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "tour-2",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Шри-Ланка",
+        description: "8 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-2",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Владимир",
+        },
+        price: "От  150 000 ₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "tour-3",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Турция",
+        description: "14 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-1",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Александра",
+        },
+        price: "От  150 000 ₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "tour-4",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Египет",
+        description: "5 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-1",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Александра",
+        },
+        price: "От  150 000 ₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "tour-5",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Казахстан",
+        description: "14 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-1",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Александра",
+        },
+        price: "От  150 000 ₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "tour-6",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Грузия",
+        description: "8 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-2",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Владимир",
+        },
+        price: "От  150 000 ₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "tour-7",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Таиланд",
+        description: "14 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-1",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Александра",
+        },
+        price: "От  150 000 ₽"
+      },
+      {
+        href: "#",
+        image: {
+          src: "tour-8",
+          format: "png",
+          width: "350",
+          height: "203",
+          alt: "popular tour"
+        },
+        title: "Мальдивы",
+        description: "5 дней",
+        additionalDescription: "(02-15 ноября)",
+        guideInfo: {
+          image: {
+            src: "user-image-1",
+            format: "png",
+            width: "49",
+            height: "49",
+            alt: "guide"
+          },
+          name: "Александра",
+        },
+        price: "От  150 000 ₽"
+      }
+    ]
+
+  section.tour-select
+    .container
+      .tour-select__wrapper
+        h2.tour-select__title Выбрать тур
+        ul.tour-select__list
+          each item in list
+            li.tour-select__item
+              +tour-card(item)

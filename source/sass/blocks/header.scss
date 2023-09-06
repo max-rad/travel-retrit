@@ -41,7 +41,7 @@
       }
     }
 
-    .main-nav__list {
+    .main-nav__wrapper {
       transform: translateX(0);
     }
   }
@@ -92,6 +92,7 @@
   &__phone {
     display: block;
     align-self: flex-start;
+    flex-shrink: 0;
 
     padding: 22px 50px;
 

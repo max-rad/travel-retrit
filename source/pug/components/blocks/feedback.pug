@@ -1,11 +1,11 @@
-mixin feedback()
+mixin feedback(data)
   section.feedback
     .feedback__background
       +picture("content/feedback", "feedback-background", "png", "1920", "575", "background")
     .container
       .feedback__wrapper
-        h2.feedback__title Задать вопрос
-        p.feedback__description После заполнения формы с&nbsp;вами свяжется наш специалист и&nbsp;проконсультирует по&nbsp;любым вопросам
+        h2.feedback__title!=data.title
+        p.feedback__description!=data.description
         .feedback__form
           form(method="get")
             .feedback__form-wrapper

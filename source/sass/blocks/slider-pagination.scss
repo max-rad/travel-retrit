@@ -1,10 +1,10 @@
 @at-root {
   :root {
     --swiper-pagination-color: #c7de2e;
-    --swiper-pagination-left: auto;
-    --swiper-pagination-right: 8px;
-    --swiper-pagination-bottom: 8px;
-    --swiper-pagination-top: auto;
+    --swiper-pagination-left: 0;
+    --swiper-pagination-right: 0;
+    --swiper-pagination-bottom: 0;
+    --swiper-pagination-top: 0;
     --swiper-pagination-fraction-color: inherit;
     --swiper-pagination-progressbar-bg-color: rgba(0,0,0,0.25);
     --swiper-pagination-progressbar-size: 4px;

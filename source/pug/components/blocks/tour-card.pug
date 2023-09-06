@@ -1,8 +1,7 @@
 mixin tour-card(data)
   .tour-card
-    //a.tour-card__link(href=data.href)
     .tour-card__image-wrapper
-      +picture("content/popular-tours", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+      +picture("content/tours", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
     .tour-card__info-wrapper
       h3.tour-card__title!=data.title
       p.tour-card__description!=data.description

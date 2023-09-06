@@ -12,12 +12,7 @@ mixin footer(footerMods)
       {
         href: "#",
         text: "Организаторам"
-      },
-      {
-        href: "#",
-        text: "Политика обработки персональных данных",
-        mod: "tablet"
-      },
+      }
     ]
 
   footer.footer(class=footerMods)
@@ -32,7 +27,7 @@ mixin footer(footerMods)
         a.footer__privacy-policy(href="#") Политика обработки персональных данных
         ul.footer__list
           each item in footerLinks
-            li.footer__item(class=(item.mod ? `footer__item--${item.mod}` : ""))
+            li.footer__item
               a.footer__link(href=item.href)!=item.text
         .footer__contacts
           a.footer__phone(href="tel:+7xxxxxxx") +7 (ххх) ххх-хх-хх

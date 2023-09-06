@@ -1,19 +1,14 @@
 import {Swiper} from '../vendor/swiper-bundle.js';
 
 const slider = document.querySelector('[data-slider="popular-tours"]');
-const totalSlides = slider.querySelectorAll('.swiper-slide').length;
-
-const controls = document.querySelector('[data-slider-controls="popular-tours"]');
-const prev = controls.querySelector('[data-slider-control="prev"]');
-const next = controls.querySelector('[data-slider-control="next"]');
-const fraction = controls.querySelector('[data-slider-fraction]');
-
 const breakpointMediaDesktop = window.matchMedia('(min-width: 1600px)');
 const breakpointMediaNotebook = window.matchMedia('(min-width: 1200px)');
 const breakpointMediaTablet = window.matchMedia('(min-width: 768px)');
 const breakpointMediaMobile = window.matchMedia('(min-width: 320px)');
 
+let totalSlides;
 let visibleSlides;
+let fraction;
 
 const breakpointChecker = () => {
   if (breakpointMediaDesktop.matches) {
@@ -26,7 +21,9 @@ const breakpointChecker = () => {
     visibleSlides = 1;
   }
 
-  fraction.textContent = `1 / ${totalSlides - visibleSlides + 1}`;
+  if (fraction) {
+    fraction.textContent = `1 / ${totalSlides - visibleSlides + 1}`;
+  }
 
   breakpointMediaDesktop.addListener(breakpointChecker);
   breakpointMediaNotebook.addListener(breakpointChecker);
@@ -38,6 +35,13 @@ const initPopularToursSlider = () => {
   if (!slider) {
     return;
   }
+
+  const controls = document.querySelector('[data-slider-controls="popular-tours"]');
+  const prev = controls.querySelector('[data-slider-control="prev"]');
+  const next = controls.querySelector('[data-slider-control="next"]');
+  fraction = controls.querySelector('[data-slider-fraction]');
+
+  totalSlides = slider.querySelectorAll('.swiper-slide').length;
 
   breakpointChecker();
 
