@@ -1,0 +1,8 @@
+mixin review(data)
+  .review
+    h3.review__title!=data.title
+    +guide-info(data.guideInfo)
+    .review__block
+      p.review__name!=data.name
+      p.review__date!=data.date
+    .review__text!=data.text

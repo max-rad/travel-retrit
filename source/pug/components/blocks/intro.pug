@@ -1,29 +1,44 @@
 mixin intro(data)
-  section.intro
-    .intro__background
-      +picture("content/intro", data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
+  section.intro(class=data.mods)
+    if (data.background)
+      .intro__background
+        +picture("content/intro", data.background.src, data.background.format, data.background.width, data.background.height, data.background.alt)
     .container
       .intro__wrapper
         .intro__content
           h1.intro__title(class={"intro__title--medium" : currentUrl !== "index.html"})!=data.title
+            if (data.icon)
+              +icon(data.icon.src, data.icon.width, data.icon.height)
+          if (data.tourCount)
+            +tour-count(data.tourCount.number).intro__tour-count
+          if (data.imageTablet)
+            .intro__image-wrapper.intro__image-wrapper--tablet
+              +picture("content/intro", data.imageTablet.src, data.imageTablet.format, data.imageTablet.width, data.imageTablet.height, data.imageTablet.alt)
+          if (data.imageMobile)
+            .intro__image-wrapper.intro__image-wrapper--mobile
+              +picture("content/intro", data.imageMobile.src, data.imageMobile.format, data.imageMobile.width, data.imageMobile.height, data.imageMobile.alt)
           if (data.description)
             p.intro__description(class={"intro__description--medium" : currentUrl !== "index.html"})!=data.description
           if (data.price)
             p.intro__price!=data.price
           if (data.button)
-            +btn({type: "button", text: "Выбрать тур"}).intro__button
+            +btn({type: "button", text: data.button.text}).intro__button(class=data.button.mods)
           if (data.form)
             .intro__form
               form(method="get")
-        .intro__additional-content
-          if (data.image)
-            .intro__image-wrapper
-              +picture("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
-          ul.intro__list
-            li.intro__item
-              a.intro__link(href="#")
-                +icon("icon-telegram", 51, 51)
-            li.intro__item
-              a.intro__link(href="#")
-                +icon("icon-whatsapp", 51, 51)
+                +custom-input({
+                  inputLabel: "от",
+                  inputType: "date",
+                  inputName: "start-date"
+                })
+        if (data.image)
+          .intro__image-wrapper
+            +picture("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)
+        ul.intro__list
+          li.intro__item
+            a.intro__link(href="#")
+              +icon("icon-telegram", 51, 51)
+          li.intro__item
+            a.intro__link(href="#")
+              +icon("icon-whatsapp", 51, 51)
 

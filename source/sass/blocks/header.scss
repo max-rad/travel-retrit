@@ -1,5 +1,5 @@
 .header {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
 
   top: 0;
@@ -10,6 +10,33 @@
   overflow: hidden;
 
   background-color: $color-transparent;
+
+  &--teal {
+    .header__logo svg {
+      color: $color-teal;
+    }
+
+    .header__phone {
+      background-color: $color-teal;
+
+      @include vp-767 {
+        background-color: $color-transparent;
+        color: $color-teal;
+      }
+    }
+
+    .main-nav__wrapper {
+      background-color: $color-teal;
+
+      @include vp-1023 {
+        background-color: $color-default-white;
+      }
+    }
+
+    .main-nav__line {
+      background-color: $color-teal;
+    }
+  }
 
   &.is-active {
     .header__logo svg {

@@ -1,0 +1,6 @@
+mixin tour-count(number)
+  .tour-count&attributes(attributes)
+    +icon("icon-earth", 30, 30)
+    p.tour-count__text Количество туров:
+      =" "
+      span.tour-count__number!=number

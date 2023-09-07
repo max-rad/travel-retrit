@@ -72,7 +72,7 @@
     padding: 25px 50px;
 
     border-radius: 0 0 10px 10px;
-    background: rgba($color-default-white, 0.24);
+    background-color: rgba($color-default-white, 0.24);
     backdrop-filter: blur(4.5px);
 
     @include vp-1023 {

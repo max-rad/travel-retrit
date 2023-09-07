@@ -1,0 +1,49 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Travel Retrit"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = "header--teal"
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "about.html"
+
+block main
+  main
+    +intro({
+      mods: "intro--about",
+      title: "Анна Иванова",
+      tourCount: {
+        number: "25",
+      },
+      description: "Я&nbsp;исколесила страну вдоль и&nbsp;поперёк, исследовала каждый уголок острова, который открывал для меня Шри-Ланку совсем с&nbsp;другой стороны. Это истинный рай на&nbsp;земле. Я&nbsp;люблю и&nbsp;знаю эту красивейшую страну. Поэтому я&nbsp;хотела создать что‑то особенное и&nbsp;увлекательное, чтобы поделиться этим с&nbsp;тобой. Чтобы показать тебе Шри-Ланку моими глазами. Так пришла идея создания авторского тура. Здесь собрано все самое любимое: проверенные комфортабельные отели, красивейшие и&nbsp;живописнейшие места, которые останутся в&nbsp;твоей памяти на&nbsp;долгие годы, ресторанчики и&nbsp;кафе с&nbsp;самой вкусной едой",
+      button: {
+        text: "Оставить отзыв",
+        mods: "btn--transparent"
+      },
+      image: {
+        src: "intro-image",
+        format: "png",
+        width: "445",
+        height: "445",
+        alt: "girl on white background"
+      },
+      imageTablet: {
+        src: "intro-image-tablet",
+        format: "png",
+        width: "308",
+        height: "460",
+        alt: "girl on white background"
+      },
+      imageMobile: {
+        src: "intro-image-mobile",
+        format: "png",
+        width: "280",
+        height: "280",
+        alt: "girl on white background"
+      }
+    })
+    +tour-select()
+    +feedback({title: "Записаться на&nbsp;тур", description: "После заполнения формы с&nbsp;вами свяжется наш специалист и&nbsp;проконсультирует по&nbsp;любым вопросам"})
+block modals

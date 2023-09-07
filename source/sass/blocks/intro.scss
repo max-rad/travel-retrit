@@ -1,17 +1,81 @@
 .intro {
   z-index: 1;
   position: relative;
-  min-height: 759px;
-  overflow: hidden;
+  //overflow: hidden;
 
   border-radius: 0 0 20px 20px;
 
-  @include vp-1023 {
-    min-height: 599px;
-  }
+  &--about {
+    .intro__content {
+      @include vp-1199 {
+        display: grid;
+        grid-template-columns: 1fr 332px;
+        grid-template-rows: min-content min-content 1fr min-content;
+        column-gap: 22px;
+      }
 
-  @include vp-767 {
-    min-height: 531px;
+      @include vp-767 {
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+      }
+    }
+
+    .intro__title {
+      text-shadow: none;
+
+      color: $color-nero;
+
+      @include vp-1199 {
+        grid-column: 1 / 3;
+      }
+    }
+
+    .intro__description {
+      max-width: 780px;
+      margin: 0 0 60px;
+
+      color: $color-nero;
+
+      @include vp-1023 {
+        margin: 0 0 50px;
+      }
+
+      @include vp-767 {
+        max-width: unset;
+        margin: 0 0 30px;
+      }
+    }
+
+    .intro__button {
+      width: 220px;
+
+      @include vp-1023 {
+        width: 214px;
+      }
+
+      @include vp-767 {
+        width: 100%;
+      }
+    }
+
+    .intro__image-wrapper {
+      &--tablet {
+        @include vp-1199 {
+          display: flex;
+        }
+
+        @include vp-767 {
+          display: none;
+        }
+      }
+
+      &--mobile {
+        @include vp-767 {
+          display: flex;
+        }
+      }
+    }
   }
 
   &__background {
@@ -54,10 +118,10 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 230px 0 100px;
+    padding: 230px 0 70px;
 
     @include vp-1023 {
-      padding: 192px 0 80px;
+      padding: 192px 0 70px;
     }
 
     @include vp-767 {
@@ -72,6 +136,8 @@
   }
 
   &__title {
+    display: flex;
+    align-items: baseline;
     max-width: 941px;
     margin: 0 0 40px;
 
@@ -115,6 +181,31 @@
         font-size: 30px;
         line-height: 39px;
       }
+    }
+
+    svg {
+      width: 31px;
+      height: 28px;
+      flex-shrink: 0;
+      margin-left: 20px;
+
+      @include vp-767 {
+        width: 22px;
+        height: 20px;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  &__tour-count {
+    margin-bottom: 20px;
+
+    @include vp-1023 {
+      margin-bottom: 40px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 50px;
     }
   }
 
@@ -205,10 +296,6 @@
     }
   }
 
-  &__additional-content {
-    position: relative;
-  }
-
   &__image-wrapper {
     position: relative;
 
@@ -229,7 +316,22 @@
     }
 
     @include vp-1199 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 5;
+
       display: none;
+
+      width: 308px;
+      height: 460px;
+      margin-top: 13px;
+      margin-left: 0;
+    }
+
+    @include vp-767 {
+      width: 280px;
+      height: 280px;
+      margin-top: 0;
+      margin-bottom: 20px;
     }
 
     &::after {
@@ -244,6 +346,38 @@
 
       border: 1px solid $color-las-palmas;
       border-radius: 10px;
+
+      @include vp-1199 {
+        bottom: 30px;
+        left: 30px;
+
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+      }
+
+      @include vp-767 {
+        bottom: 26px;
+        left: 26px;
+
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @include vp-1439 {
+        margin-right: 24px;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @include vp-767 {
+        margin-right: 20px;
+      }
     }
 
     img {
@@ -256,14 +390,27 @@
       border-radius: 10px;
 
       object-fit: contain;
+
+      @include vp-1199 {
+        width: 308px;
+        height: 460px;
+      }
+
+      @include vp-767 {
+        width: 280px;
+        height: 280px;
+      }
     }
   }
 
   &__list {
+    z-index: 1;
     position: absolute;
+    display: flex;
+    flex-direction: column;
 
     right: -66px;
-    bottom: -13px;
+    bottom: 60px;
 
     margin: 0;
     padding: 0;
@@ -296,21 +443,21 @@
     justify-content: center;
     align-items: center;
 
+    border-radius: 5px;
+    background-color: $color-blue-lagoon;
+    backdrop-filter: blur(4.5px);
+
+    transition: background-color $trans-default;
+
     svg {
       flex-shrink: 0;
 
       width: 51px;
       height: 51px;
-
-      color: $color-blue-lagoon;
-
-      transition: color $trans-default;
     }
 
     @include hover-focus {
-      svg {
-        color: $color-teal;
-      }
+      background-color: $color-teal;
     }
   }
 }

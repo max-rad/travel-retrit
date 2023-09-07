@@ -1,0 +1,35 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Travel Retrit"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = true
+  - const footerMods = ""
+  - const currentUrl = "reviews.html"
+
+block main
+  main
+    +intro({
+      background: {
+        src: "intro-background-reviews",
+        format: "png",
+        width: "1920",
+        height: "759",
+        alt: "background"
+      },
+      title: "Отзывы о&nbsp;нас",
+      icon: {
+        src: "icon-heart",
+        width: "31",
+        height: "28"
+      },
+      description: "Ознакомьтесь с&nbsp;отзывами об&nbsp;авторах и&nbsp;их&nbsp;турах, а&nbsp;также поделитесь своими впечатлениями о&nbsp;поездке",
+      button: {
+        text: "Выбрать тур"
+      }
+    })
+    +reviews()
+    +feedback({title: "Записаться на&nbsp;тур", description: "После заполнения формы с&nbsp;вами свяжется наш специалист и&nbsp;проконсультирует по&nbsp;любым вопросам"})
+block modals
