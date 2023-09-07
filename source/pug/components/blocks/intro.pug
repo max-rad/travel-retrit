@@ -25,12 +25,7 @@ mixin intro(data)
             +btn({type: "button", text: data.button.text}).intro__button(class=data.button.mods)
           if (data.form)
             .intro__form
-              form(method="get")
-                +custom-input({
-                  inputLabel: "от",
-                  inputType: "date",
-                  inputName: "start-date"
-                })
+              +select-parameters()
         if (data.image)
           .intro__image-wrapper
             +picture("content/intro", data.image.src, data.image.format, data.image.width, data.image.height, data.image.alt)

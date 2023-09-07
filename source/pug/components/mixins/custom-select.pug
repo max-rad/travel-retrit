@@ -1,0 +1,15 @@
+mixin custom-select(options={})
+  - const selectPlaceholder = options.selectPlaceholder ? options.selectPlaceholder : false
+  - const selectOptionsList = options.selectOptionsList ? options.selectOptionsList : false
+
+  .custom-select(data-select)&attributes(attributes)
+    button(type="button" data-select-button).btn-reset.custom-select__button
+      span.custom-select__text!=selectPlaceholder
+      span.custom-select__icon
+        +icon("icon-arrow-down", 17, 8)
+    .custom-select__dropdown
+      ul.custom-select__list(role="listbox" data-select-list)
+        each item in selectOptionsList
+          - const ariaSelected = item.isActive ? "true" : "false"
+          li.custom-select__item(tabindex="0" data-select-value=item.value aria-selected=ariaSelected role="option")=item.text
+      input(type="text" name="selected-option" data-select-input)

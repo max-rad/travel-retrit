@@ -5,6 +5,14 @@
 
   border-radius: 0 0 20px 20px;
 
+  &--parameters {
+    .intro__list {
+      @include vp-1023 {
+        bottom: -60px;
+      }
+    }
+  }
+
   &--about {
     .intro__content {
       @include vp-1199 {

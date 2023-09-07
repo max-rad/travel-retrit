@@ -7,19 +7,25 @@
   }
 
   input {
-    padding: 7px 16px;
+    width: 100%;
+    height: 44px;
+    padding: 10px 15px;
 
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 
     border: none;
-    color: $color-dim-gray;
-
     border-radius: 5px;
-    background-color: $color-white-smoke;
+    background-color: $color-default-white;
+    color: $color-nero;
 
     outline: none;
+
+    @include vp-767 {
+      height: 36px;
+      padding: 6px 10px;
+    }
   }
 
   &__label {
@@ -31,5 +37,40 @@
     line-height: 24px;
 
     color: $color-dim-gray;
+  }
+
+  &--grey {
+    input {
+      height: 38px;
+      padding: 7px 16px;
+
+      color: $color-dim-gray;
+
+      background-color: $color-white-smoke;
+
+      @include vp-767 {
+        height: 38px;
+      }
+    }
+  }
+
+  &--inner-label {
+    .custom-input__label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+
+      margin-bottom: 0;
+
+      transform: translateY(-50%);
+    }
+
+    input {
+      padding: 10px 15px 10px 46px;
+
+      @include vp-767 {
+        padding: 6px 6px 6px 46px;
+      }
+    }
   }
 }

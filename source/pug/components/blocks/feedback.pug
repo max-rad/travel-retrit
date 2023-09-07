@@ -13,16 +13,16 @@ mixin feedback(data)
                 inputLabel: "*Ваше имя",
                 inputType: "text",
                 inputName: "name"
-              }).feedback__input
+              }).custom-input--grey.feedback__input
               +custom-input({
                 inputLabel: "*Ваш телефон",
                 inputType: "tel",
                 inputName: "phone"
-              }).feedback__input
+              }).custom-input--grey.feedback__input
               +custom-textarea({
                 textareaLabel: "Ваш вопрос",
                 textareaName: "question"
-              }).feedback__textarea
+              }).custom-textarea--grey.feedback__textarea
             +btn({type: "submit", text: "Отправить"}).feedback__button
             p.feedback__text Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, Вы&nbsp;соглашаетесь с&nbsp;
               a(href="#") политикой обработки персональных данных

@@ -1,0 +1,141 @@
+mixin select-parameters()
+  .select-parameters
+    form(method="get")
+      .select-parameters__form-wrapper
+        .select-parameters__block
+          fieldset.select-parameters__fieldset
+            legend.select-parameters__legend Дата начала
+            .select-parameters__fieldset-wrapper
+              +custom-input({
+                inputLabel: "от",
+                inputType: "date",
+                inputName: "start-date"
+              }).custom-input--inner-label
+              +custom-input({
+                inputLabel: "до",
+                inputType: "date",
+                inputName: "end-date"
+              }).custom-input--inner-label
+          fieldset.select-parameters__fieldset
+            legend.select-parameters__legend Длительность
+            .select-parameters__fieldset-wrapper.select-parameters__fieldset-wrapper--duration
+              +custom-input({
+                inputLabel: "от",
+                inputType: "number",
+                inputName: "start-date",
+                inputValue: "3"
+              }).custom-input--inner-label
+              +custom-input({
+                inputLabel: "до",
+                inputType: "number",
+                inputName: "end-date",
+                inputValue: "20"
+              }).custom-input--inner-label
+        .select-parameters__additional-block
+          +custom-select({
+            selectPlaceholder: "Страна направления",
+            selectOptionsList: [
+              {
+                value: "option-1",
+                text: "option-1"
+              },
+              {
+                value: "option-2",
+                text: "option-2"
+              },
+              {
+                value: "option-3",
+                text: "option-3"
+              },
+              {
+                value: "option-4",
+                text: "option-4"
+              }
+            ]
+          }).select-parameters__select
+          +custom-select({
+            selectPlaceholder: "Город",
+            selectOptionsList: [
+              {
+                value: "option-1",
+                text: "option-1"
+              },
+              {
+                value: "option-2",
+                text: "option-2"
+              },
+              {
+                value: "option-3",
+                text: "option-3"
+              },
+              {
+                value: "option-4",
+                text: "option-4"
+              }
+            ]
+          }).select-parameters__select
+          +custom-select({
+            selectPlaceholder: "Хочу увидеть",
+            selectOptionsList: [
+              {
+                value: "option-1",
+                text: "option-1"
+              },
+              {
+                value: "option-2",
+                text: "option-2"
+              },
+              {
+                value: "option-3",
+                text: "option-3"
+              },
+              {
+                value: "option-4",
+                text: "option-4"
+              }
+            ]
+          }).select-parameters__select
+        .select-parameters__additional-block
+          +custom-select({
+            selectPlaceholder: "Тематика",
+            selectOptionsList: [
+              {
+                value: "option-1",
+                text: "option-1"
+              },
+              {
+                value: "option-2",
+                text: "option-2"
+              },
+              {
+                value: "option-3",
+                text: "option-3"
+              },
+              {
+                value: "option-4",
+                text: "option-4"
+              }
+            ]
+          }).select-parameters__select
+          +custom-select({
+            selectPlaceholder: "Travel-гид",
+            selectOptionsList: [
+              {
+                value: "option-1",
+                text: "option-1"
+              },
+              {
+                value: "option-2",
+                text: "option-2"
+              },
+              {
+                value: "option-3",
+                text: "option-3"
+              },
+              {
+                value: "option-4",
+                text: "option-4"
+              }
+            ]
+          }).select-parameters__select
+          +btn({type: "submit", text: "Применить"}).btn--small.select-parameters__button

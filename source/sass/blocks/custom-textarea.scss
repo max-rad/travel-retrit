@@ -9,17 +9,16 @@
 
   textarea {
     height: 100%;
-    padding: 7px 16px;
 
+    padding: 10px 15px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
 
     border: none;
-    color: $color-dim-gray;
-
     border-radius: 5px;
-    background-color: $color-white-smoke;
+    background-color: $color-default-white;
+    color: $color-nero;
 
     outline: none;
   }
@@ -33,5 +32,14 @@
     line-height: 24px;
 
     color: $color-dim-gray;
+  }
+
+  &--grey {
+    textarea {
+      padding: 7px 16px;
+
+      background-color: $color-white-smoke;
+      color: $color-dim-gray;
+    }
   }
 }
