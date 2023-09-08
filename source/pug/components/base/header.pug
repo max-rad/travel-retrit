@@ -3,7 +3,7 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "#",
-        text: "Туры",
+        text: "Туры"
       },
       {
         href: "#",
@@ -22,7 +22,9 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods data-menu)
     .container
       .header__wrapper
-        if(currentUrl === "index.html")
+        if (breadcrumbs)
+          +breadcrumbs(breadcrumbs)
+        if (currentUrl === "index.html")
           span.header__logo
             +icon("logo", 152, 102)
         else

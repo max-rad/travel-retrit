@@ -8,10 +8,31 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "reviews.html"
+  -
+    const breadcrumbs = [
+      {
+        href: "index.html",
+        text: "Главная"
+      },
+      {
+        text: "Отзывы",
+        currentLink: true
+      }
+    ]
 
 block main
   main
     +intro({
+      breadcrumbs: [
+        {
+          href: "#",
+          text: "Главная"
+        },
+        {
+          text: "Отзывы",
+          currentLink: true
+        }
+      ],
       background: {
         src: "intro-background-reviews",
         format: "png",

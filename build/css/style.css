@@ -1418,6 +1418,7 @@ button,
 }
 
 .header__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3791,6 +3792,60 @@ button,
   content: none;
 }
 
+.breadcrumbs {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0;
+}
+
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  position: relative;
+  margin-right: 20px;
+}
+
+.breadcrumbs__item::after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.breadcrumbs__item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs__item:last-child::after {
+  content: none;
+}
+
+.breadcrumbs__link {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
 @media (max-width: 1599px) {
   .countries__label {
     bottom: 20px;
@@ -3878,6 +3933,10 @@ button,
 }
 
 @media (max-width: 1199px) {
+  .main-nav__wrapper {
+    padding: 25px 30px;
+  }
+
   .footer__wrapper {
     display: -ms-grid;
     display: grid;
@@ -4656,6 +4715,10 @@ button,
     padding: 0 20px;
   }
 
+  .header {
+    min-height: 110px;
+  }
+
   .header--teal .header__phone {
     background-color: rgba(255, 255, 255, 0);
     color: #037280;
@@ -5137,8 +5200,12 @@ button,
     height: 38px;
   }
 
+  .custom-input--inner-label .custom-input__label {
+    left: 10px;
+  }
+
   .custom-input--inner-label input {
-    padding: 6px 6px 6px 46px;
+    padding: 6px 6px 6px 30px;
   }
 
   .custom-select__button {
@@ -5558,6 +5625,25 @@ button,
 
   .select-parameters__button {
     margin-top: 10px;
+  }
+
+  .breadcrumbs {
+    top: 85px;
+  }
+
+  .breadcrumbs__item {
+    margin-right: 15px;
+  }
+
+  .breadcrumbs__item::after {
+    right: -12px;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .breadcrumbs__link {
+    font-size: 13px;
+    line-height: 21px;
   }
 }
 
